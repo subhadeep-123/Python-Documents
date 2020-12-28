@@ -1,10 +1,12 @@
 ## Python
+1. ~os.path~
+2. ~linecache~
+3. ~glob~
+4. ~agrparse~
 * JSON
 * Logging
-* Os.path
 * Sys
 * gc
-* Agrparse
 * ABC 
 * Functools
 * Itertools
