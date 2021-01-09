@@ -28,9 +28,9 @@ Multiple threads can exist within one process where:
 ![](one.png)
 
 **Multithreading** is defined as the ability of a processor to execute multiple threads concurrently.
-<pre>
-    In a simple, single-core CPU, it is achieved using frequent switching between threads. This is termed as context switching. In context switching, the state of a thread is saved and state of another thread is loaded whenever any interrupt (due to I/O or manually set) takes place. Context switching takes place so frequently that all the threads appear to be running parallely (this is termed as multitasking).
-</pre>
+
+In a simple, single-core CPU, it is achieved using frequent switching between threads. This is termed as context switching. In context switching, the state of a thread is saved and state of another thread is loaded whenever any interrupt (due to I/O or manually set) takes place. Context switching takes place so frequently that all the threads appear to be running parallely (this is termed as multitasking).
+
 Consider the diagram below in which a process contains two active threads:
 
 ![](https://media.geeksforgeeks.org/wp-content/uploads/multithreading-python-31.png)
@@ -42,14 +42,16 @@ For example in the diagram below 3 thrrads try to access shared, resources or cr
 ![](https://media.geeksforgeeks.org/wp-content/uploads/multithreading-python-1.png)
 
 Concurrent accesses to shared resource can lead to race condition.
-<pre>
-    A race condition occurs when two or more threads can access shared data and they try to change it at the same time. As a result, the values of variables may be unpredictable and vary depending on the timings of context switches of the processes.
-</pre>
+
+A race condition occurs when two or more threads can access shared data and they try to change it at the same time. As a result, the values of variables may be unpredictable and vary depending on the timings of context switches of the processes.
+
+
 # Using Locks
 threading module provides a Lock class to deal with the race conditions. Lock is implemented using a Semaphore object provided by the Operating System.
-<pre>
-    A semaphore is a synchronization object that controls access by multiple processes/threads to a common resource in a parallel programming environment. It is simply a value in a designated place in operating system (or kernel) storage that each process/thread can check and then change. Depending on the value that is found, the process/thread can use the resource or will find that it is already in use and must wait for some period before trying again. Semaphores can be binary (0 or 1) or can have additional values. Typically, a process/thread using semaphores checks the value and then, if it using the resource, changes the value to reflect this so that subsequent semaphore users will know to wait.
-</pre>
+
+A semaphore is a synchronization object that controls access by multiple processes/threads to a common resource in a parallel programming environment. It is simply a value in a designated place in operating system (or kernel) storage that each process/thread can check and then change. Depending on the value that is found, the process/thread can use the resource or will find that it is already in use and must wait for some period before trying again. Semaphores can be binary (0 or 1) or can have additional values. Typically, a process/thread using semaphores checks the value and then, if it using the resource, changes the value to reflect this so that subsequent semaphore users will know to wait.
+
+
 **Lock** class provides following methods:
 
 * **acquire([blocking])** : To acquire a lock. A lock can be blocking or non-blocking.
