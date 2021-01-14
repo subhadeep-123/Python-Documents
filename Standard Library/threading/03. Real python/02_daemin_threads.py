@@ -4,7 +4,7 @@ A daemon is a process that runs in the background
 # Python threading has a more specific meaning for daemon.
 # A daemon thread will shut down immediately when the program exits.
 # One way to think about these definations is to consider the daemon thread
-# a thread that runs in the background without worrying aboyt shutting down
+# a thread that runs in the background without worrying about shutting down
 # If a program is running threads that is not daemon, then the program will wait
 # for those threads to complete before it terminates THreads that are daemons,
 # however are just killed whenever they are when the program is exiting
