@@ -3,6 +3,7 @@
 2. ~linecache~
 3. ~glob~
 4. ~agrparse~
+5. ~threading~
 * JSON
 * Logging
 * Sys
@@ -16,7 +17,6 @@
 * io
 * contextlib
 * errno
-* threading
 * multiprocessing
 * subprocesses
 * queue
