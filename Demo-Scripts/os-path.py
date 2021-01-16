@@ -46,5 +46,5 @@ class FilePlay(object):
 
 
 if __name__ == '__main__':
-    obj = FilePlay("Subhadeep", "Banerjee", 20)
+    obj = FilePlay("Iam", "Matrix", 21)
     obj.doWrite()
