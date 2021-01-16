@@ -4,8 +4,8 @@
 3. ~glob~
 4. ~agrparse~
 5. ~threading~
+6. ~Logging~
 * JSON
-* Logging
 * Sys
 * gc
 * ABC 
