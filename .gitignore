@@ -2,3 +2,6 @@
 .vs/VSWorkspaceState.json
 .vs/slnx.sqlite
 .vs/Python-Documents/v16/.suo
+ __pycache__
+Demo-Scripts/tempCodeRunnerFile.py
+Demo-Scripts/__pycache__/argparse.cpython-38.pyc
