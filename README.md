@@ -5,10 +5,11 @@
 4. ~agrparse~
 5. ~threading~
 6. ~Logging~
-7. Builtins
-* JSON
+7. ~Builtins~
+8. ~JSON~~
+9. gc
+10. concurrent.futures
 * Sys
-* gc
 * ABC 
 * Functools
 * Itertools
