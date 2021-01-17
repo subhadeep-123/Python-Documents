@@ -5,6 +5,7 @@
 4. ~agrparse~
 5. ~threading~
 6. ~Logging~
+7. Builtins
 * JSON
 * Sys
 * gc
