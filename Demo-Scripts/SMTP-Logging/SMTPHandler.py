@@ -10,8 +10,8 @@ import datetime
 def smtp_handler(name, toaddr, subject):
     CONTEXT = ssl.create_default_context()
     FILE = 'index.html'
-    EMAIL = 'dummyemailtest8@gmail.com'
-    PASSWORD = 'dummy_1234'
+    EMAIL = 'something8@gmail.com'
+    PASSWORD = 'something'
     if Path(FILE).exists():
         html = Template(Path(FILE).read_text())
     else:

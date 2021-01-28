@@ -20,6 +20,6 @@ context = ssl.create_default_context()
 with smtplib.SMTP(host='smtp.gmail.com', port=587) as smtp:
     smtp.ehlo()
     smtp.starttls(context=context)
-    smtp.login('dummyemailtest8@gmail.com', 'dummy_1234')
+    smtp.login('something@gmail.com', 'something')
     smtp.send_message(email)
     print('All Good Boss!')
