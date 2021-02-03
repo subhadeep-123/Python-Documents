@@ -1,4 +1,5 @@
 from tkinter import *
+from typing import Match
 
 root = Tk()
 root.title("Simple Calculator")
@@ -20,29 +21,53 @@ def btn_clear():
 def btn_add():
     fnum = a.get()
     global f_num
+    global math
+    math = "addition"
     f_num = int(fnum)
     a.delete(0, END)
 
 
 def btn_sub():
-    pass
+    fnum = a.get()
+    global f_num
+    global math
+    math = "substraction"
+    f_num = int(fnum)
+    a.delete(0, END)
 
 
 def btn_mult():
-    pass
+    fnum = a.get()
+    global f_num
+    global math
+    math = "multiplication"
+    f_num = int(fnum)
+    a.delete(0, END)
 
 
 def btn_div():
-    pass
+    fnum = a.get()
+    global f_num
+    global math
+    math = "division"
+    f_num = int(fnum)
+    a.delete(0, END)
 
 
 def btn_equal():
     snum = a.get()
     a.delete(0, END)
-    a.insert(0, f_num+int(snum))
+    if math == 'addition':
+        a.insert(0, f_num+int(snum))
+    if math == 'substraction':
+        a.insert(0, f_num-int(snum))
+    if math == 'multiplication':
+        a.insert(0, f_num*int(snum))
+    if math == 'division':
+        a.insert(0, f_num/int(snum))
 
 
-# Definig Buttons
+        # Definig Buttons
 btn_1 = Button(root, text="1", padx=40, pady=20,
                command=lambda: button_click(1))
 btn_2 = Button(root, text="2", padx=40, pady=20,
@@ -70,11 +95,11 @@ button_clear = Button(root, text="Clear", padx=79,
 
 button_add = Button(root, text="+", padx=39, pady=20,
                     command=btn_add)
-button_sub = Button(root, text="-", padx=39, pady=20,
+button_sub = Button(root, text="-", padx=41, pady=20,
                     command=btn_sub)
-button_mult = Button(root, text="*", padx=39, pady=20,
+button_mult = Button(root, text="*", padx=40, pady=20,
                      command=btn_mult)
-button_div = Button(root, text="/", padx=39, pady=20,
+button_div = Button(root, text="/", padx=42, pady=20,
                     command=btn_div)
 
 # Put Buttons on the screen
