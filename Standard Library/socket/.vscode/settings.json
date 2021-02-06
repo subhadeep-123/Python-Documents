@@ -1,0 +1,20 @@
+{
+    "python.pythonPath": "C:\\Users\\Subhadeep Banerjee\\AppData\\Local\\Programs\\Python\\Python38\\python.exe",
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#5edf8b",
+        "activityBar.activeBorder": "#8c5fdf",
+        "activityBar.background": "#5edf8b",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#8c5fdf",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "statusBar.background": "#33d76c",
+        "statusBar.foreground": "#15202b",
+        "statusBarItem.hoverBackground": "#23b455",
+        "titleBar.activeBackground": "#33d76c",
+        "titleBar.activeForeground": "#15202b",
+        "titleBar.inactiveBackground": "#33d76c99",
+        "titleBar.inactiveForeground": "#15202b99"
+    },
+    "peacock.color": "#33d76c"
+}
