@@ -14,7 +14,7 @@ def popUp():
 
 
 def yesorno():
-    resp = messagebox.askyesno("Hey", "Yes or No")
+    resp = messagebox.askquestion("Hey", "Yes or No")
     Label(root, text=resp).pack()
 
 
