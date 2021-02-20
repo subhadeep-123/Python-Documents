@@ -1,6 +1,7 @@
 from pymongo import MongoClient, errors
 import logging
 import gc
+import datetime
 
 logger = logging.getLogger(__name__)
 logger.setLevel(10)
@@ -15,21 +16,21 @@ else:
     logger.debug("[CONNECTED TO MONGO CLIENT]")
 
 
-db = client.Test
-col = db.one
+db = client.OpenUp
+col = db.records
 
 
 class ToDatabase:
-    def __init__(self, name: str, age: int, email: str) -> None:
-        self.name = name
-        self.age = age
-        self.email = email
+    def __init__(self, major: int, minor: int) -> None:
+        self.major = major
+        self.minor = minor
+        self.timestamp = str(datetime.datetime.now())
 
     def insert_data(self) -> None:
         data = {
-            'Name': self.name,
-            'Age': self.age,
-            'Email': self.email
+            'Major': self.major,
+            'Minor': self.minor,
+            'Timestamp': self.timestamp
         }
         data_id = col.insert_one(data).inserted_id
         logger.debug(f'[DATA INSERTED] - object_id - {data_id}')
@@ -37,10 +38,11 @@ class ToDatabase:
 
     def exists(self):
         # if col.find({'Email': {"$in": self.email}}).count() > 0: # For If self.email is an array
-        if col.find({'Email': self.email}).count() > 0:
-            logger.debug(f'[DOCUMENT EXISTS] - {self.email}')
+        if col.find({'Major': self.major, 'Minor': self.minor}).count() > 0:
+            logger.debug(f'[DOCUMENT EXISTS] - {self.major}-{self.minor}')
         else:
-            logger.debug(f'[DOCUMENT DOES NOT EXISTS] - {self.email}')
+            logger.debug(
+                f'[DOCUMENT DOES NOT EXISTS] - {self.major}-{self.minor}')
             self.insert_data()
 
     @staticmethod
@@ -57,35 +59,10 @@ class ToDatabase:
 
 # Helper Function
 def main():
-    names = [
-        'Subhadeep',
-        'Ria',
-        'Richard',
-        'Soumya',
-        'Shubham',
-        'Subhadeep',
-        'Ria',
-        'Richard',
-        'Soumya',
-        'Shubham',
-        'Matrix'
-    ]
-    ages = [21, 22, 22, 21, 23, 21, 22, 22, 21, 23, 30]
-    emails = [
-        'subhadeep762@gmail.com',
-        'riagupta201@gmail.com',
-        'flip.brian35@gmail.com',
-        'soumamitra07@gmail.com',
-        'shubhamnag789@gmail.com',
-        'subhadeep762@gmail.com',
-        'riagupta201@gmail.com',
-        'flip.brian35@gmail.com',
-        'soumamitra07@gmail.com',
-        'shubhamnag789@gmail.com',
-        'subhadeep@klizos.com'
-    ]
-    for i in range(len(names)):
-        obj = ToDatabase(names[i], ages[i], emails[i])
+    majors = ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10']
+    minors = ['21', '22', '22', '21', '23', '21', '22', '22', '21', '23', '30']
+    for i in range(len(majors)):
+        obj = ToDatabase(majors[i], minors[i])
         obj.exists()
         # obj.insert_data()
 
