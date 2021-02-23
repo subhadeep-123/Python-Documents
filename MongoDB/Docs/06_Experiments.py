@@ -6,6 +6,7 @@ import datetime
 logger = logging.getLogger(__name__)
 logger.setLevel(10)
 logging.basicConfig(level=10)
+
 try:
     client = MongoClient('localhost', 27017)
 except errors.ConnectionFailure as ef:
@@ -35,7 +36,6 @@ class ToDatabase:
         data_id = col.insert_one(data).inserted_id
         logger.debug(f'[DATA INSERTED] - object_id - {data_id}')
         gc.collect()
-
     def exists(self):
         # if col.find({'Email': {"$in": self.email}}).count() > 0: # For If self.email is an array
         if col.find({'Major': self.major, 'Minor': self.minor}).count() > 0:
@@ -44,7 +44,6 @@ class ToDatabase:
             logger.debug(
                 f'[DOCUMENT DOES NOT EXISTS] - {self.major}-{self.minor}')
             self.insert_data()
-
     @staticmethod
     def fetch_data_from_db() -> None:
         for data in col.find():
