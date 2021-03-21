@@ -4,9 +4,9 @@
 3. ~glob~
 4. ~agrparse~
 5. ~threading~
-6. ~Logging~
-7. ~Builtins~
-8. ~JSON~
+6. ~logging~
+7. ~builtins~
+8. ~json~
 9. ~gc~
 10. ~__main__~
 11. ~traceback~
@@ -20,6 +20,9 @@
 19. ~shutil~
 20. ~tkinter~
 21. ~fcntl~
+22. ~tempfile~
+23. ~ftplib~
+24. ~errno~
 
 ## TODO
 * Sys
@@ -32,7 +35,6 @@
 * os
 * io
 * contextlib
-* errno
 * multiprocessing
 * subprocesses
 * contextvariable
