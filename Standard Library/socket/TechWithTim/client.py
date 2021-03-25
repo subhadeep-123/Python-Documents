@@ -19,10 +19,17 @@ def send(msg):
     client.send(send_length)
     client.send(message)
 
+# Helper Function
 
-send("Hello World")
-input()
-send("Check Check")
-input()
-send("Yooooo")
-send(DISCONNECT_MESSAGE)
+
+def main():
+    sending = True
+    while sending:
+        msg = input()
+        if msg == 'q':
+            sending = False
+        send(msg)
+
+
+if __name__ == '__main__':
+    main()
