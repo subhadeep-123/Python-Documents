@@ -23,12 +23,14 @@
 22. ~tempfile~
 23. ~ftplib~
 24. ~errno~
+25. ~collections~
+26. ~functools~
+27. ~itertools~
+28. ~enum~
 
 ## TODO
 * Sys
 * ABC 
-* Functools
-* Itertools
 * concurrent.futures
 * sqlite3
 * CSV
