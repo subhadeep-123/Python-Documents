@@ -10,5 +10,14 @@ def index():
 
 @app.route('/login')
 def login():
-    abort(401)
-    this_is_never_executed()
+    abort(404)
+
+
+@app.route('/testerror')
+@app.errorhandler(401)
+def errorPage():
+    return "This Page does not exists - 404",
+
+
+if __name__ == '__main__':
+    app.run()

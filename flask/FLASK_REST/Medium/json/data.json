@@ -1,0 +1,77 @@
+{
+   "hospital":[
+      {
+         "name":"Care Hospital, Banjara",
+         "cleanliness":"4",
+         "facilities":"3",
+         "doc-behaviour":"4.5",
+         "quality-of-service":"3.5"
+      },
+      {
+         "name":"Apollo Hospitals",
+         "cleanliness":"3.5",
+         "facilities":"5",
+         "doc-behaviour":"4",
+         "quality-of-service":"3.5"
+      },
+      {
+         "name":"Janta Hospitals",
+         "cleanliness":"3.5",
+         "facilities":"3.5",
+         "doc-behaviour":"4",
+         "quality-of-service":"3.5"
+      }
+   ],
+   "complaint":[
+      {
+         "name":"rahul",
+         "email":"rahul123@gmail.com",
+         "contact":"9874651231",
+         "description":"Poor pharmacy quality."
+      },
+      {
+         "name":"Raman",
+         "email":"raman321@gmail.com",
+         "contact":"987654321",
+         "description":"Quite bad patient care."
+      },
+      {
+         "name":"r",
+         "email":"r",
+         "contact":"3",
+         "description":"ewew"
+      },
+      {
+         "name":"anurag",
+         "email":"anurag@gmail.com",
+         "contact":"457991187",
+         "description":"It's too dirty"
+      }
+   ],
+   "services":[
+      {
+         "service-name":"Pradhan Mantri jannani suraksha yojna",
+         "details":"Provides financial assistance of Rs. 500 upto 2 births to pregnant women who have attend 19 years of age and below poverty level."
+      },
+      {
+         "service-name":"Electronic Health Record",
+         "details":"Govt. introduced electronic health record(EHR) to make digitalize health care sector with better efficiency."
+      },
+      {
+         "service-name":"Strategic Purchase",
+         "details":"Strategic Purchase of secondary and tertiary health care services."
+      },
+      {
+         "service-name":"Health and Wellness centre",
+         "details":"Hospitals stock and staff surgical suites that can be used for outpatient services or in-depth procedures, such as transplants, heart surgery and repairing broken bones. "
+      },
+      {
+         "service-name":"National Digital Health Authority",
+         "details":"It regulates and deploy national degital health care."
+      },
+      {
+         "service-name":"Notification",
+         "details":"Zika virus notification"
+      }
+   ]
+}

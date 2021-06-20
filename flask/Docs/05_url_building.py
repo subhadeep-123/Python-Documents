@@ -11,7 +11,7 @@ def index():
 
 @app.route('/login')
 def login():
-    return 'login'
+    return url_for('login', username='Matrix', Password='iamamtrix')
 
 
 @app.route('/user/<username>')
