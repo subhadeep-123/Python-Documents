@@ -27,21 +27,6 @@
 26. ~functools~
 27. ~itertools~
 28. ~enum~
-
-## TODO
-* Sys
-* ABC 
-* concurrent.futures
-* sqlite3
-* CSV
-* os
-* io
-* contextlib
-* multiprocessing
-* subprocesses
-* contextvariable
-* ssl
-* requests
-* webbrowser
-* base64
-* email
+29. ~dataclass~
+30. ~addict~
+31. ~sqlite3~
